@@ -16,10 +16,15 @@ export const Container = styled.nav`
 `;
 
 export const LogoContainer = styled.div`
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 12rem;
+
+  ${media.greaterThan("medium")`
+    width: 14rem;
+  `}
 `;
 
 export const Logo = styled.img`
@@ -38,6 +43,7 @@ export const Text = styled.span`
 `;
 
 export const TextButton = styled.div`
+  cursor: pointer;
   display: none;
   padding: 0rem 1.5rem;
   justify-content: center;
@@ -49,6 +55,10 @@ export const TextButton = styled.div`
 
   & > svg {
     transform: rotate(-45deg);
+  }
+
+  &:hover {
+    text-decoration: underline;
   }
 
   ${media.greaterThan("medium")`
@@ -69,6 +79,18 @@ export const PublishButton = styled.div`
   color: ${({ theme }) => theme.colors["gray/50"]};
   font-size: 1.25rem;
   margin-right: 1rem;
+  transition: all 500ms;
+
+  &:hover {
+    border-color: ${({ theme }) => theme.colors["lime/600"]};
+    background-color: ${({ theme }) => theme.colors["lime/600"]};
+  }
+
+  &:active {
+    border-color: ${({ theme }) => theme.colors["lime/700"]};
+    background-color: ${({ theme }) => theme.colors["lime/700"]};
+    transform: scale(1.05);
+  }
 `;
 
 export const SignInButton = styled.div`
@@ -82,6 +104,18 @@ export const SignInButton = styled.div`
   font-weight: 600;
   color: ${({ theme }) => theme.colors["gray/900"]};
   font-size: 1.25rem;
+  transition: all 500ms;
+
+  &:hover {
+    border-color: ${({ theme }) => theme.colors["lime/500"]};
+    color: ${({ theme }) => theme.colors["lime/500"]};
+  }
+
+  &:active {
+    border-color: ${({ theme }) => theme.colors["lime/700"]};
+    color: ${({ theme }) => theme.colors["lime/700"]};
+    transform: scale(1.05);
+  }
 
   ${media.greaterThan("medium")`
     display: flex;
