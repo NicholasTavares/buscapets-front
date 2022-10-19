@@ -28,7 +28,7 @@ export const ContainerButtons = styled.div`
 
 export const PublishButton = styled.div`
   display: flex;
-  padding: 0.8rem 1rem;
+  padding: 0.75rem 1.5rem;
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.colors["lime/500"]};
