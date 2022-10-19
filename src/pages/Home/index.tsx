@@ -1,6 +1,6 @@
 import { Faders, MagnifyingGlass } from "phosphor-react";
 import { Navbar } from "../../components/Navbar";
-import { PublicationPreview } from "../../components/PublicationPreview";
+import PublicationPreview from "../../components/PublicationPreview";
 import teste_data from "./test.json";
 import * as S from "./styles";
 

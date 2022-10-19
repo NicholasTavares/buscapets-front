@@ -1,3 +1,4 @@
+import { memo } from "react";
 import * as S from "./styles";
 
 type PublicationPreviewProps = {
@@ -10,7 +11,7 @@ type PublicationPreviewProps = {
   created_at: string;
 };
 
-export const PublicationPreview = ({
+const PublicationPreview = ({
   id,
   title,
   description,
@@ -40,3 +41,5 @@ export const PublicationPreview = ({
     </S.Container>
   );
 };
+
+export default memo(PublicationPreview);
