@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 type DropDownProps = {
   open: boolean;
@@ -12,6 +13,10 @@ export const Button = styled.div`
   justify-content: center;
   margin-right: 1rem;
   overflow: hidden;
+
+  ${media.greaterThan("medium")`
+    display: none;
+  `}
 `;
 
 export const Container = styled.div<DropDownProps>`
