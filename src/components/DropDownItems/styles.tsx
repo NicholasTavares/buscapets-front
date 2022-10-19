@@ -16,7 +16,7 @@ export const Button = styled.div`
 
 export const Container = styled.div<DropDownProps>`
   position: absolute;
-  z-index: 1rem;
+  z-index: 1;
   top: 6rem;
   background-color: ${({ theme }) => theme.colors["gray/200"]};
   border: 1px solid ${({ theme }) => theme.colors["gray/300"]};
