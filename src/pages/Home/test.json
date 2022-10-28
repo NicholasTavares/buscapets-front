@@ -1,0 +1,92 @@
+[
+  {
+    "id": "7bc528e8-a0de-4580-9394-a244d23c22aa",
+    "user_id": "dc50442c-3e9c-4d04-a813-32de6f53e342",
+    "title": "Gatinho perdido no IFRN",
+    "description": "Meu gatinho se perdeu perto do IFRN Central, em frente ao Midway. Estava lenvando-o para se vacinar e um cachorro o assustou.",
+    "pet_name": "Toby",
+    "type": "missing",
+    "sex": "male",
+    "last_location": {
+      "type": "Point",
+      "coordinates": [
+        -35.20471592828529,
+        -5.811927394510131
+      ]
+    },
+    "disappearance_date": "2022-02-10T03:00:00.000Z",
+    "created_at": "2022-10-19T01:05:36.487Z",
+    "updated_at": "2022-10-19T01:05:36.487Z",
+    "deleted_at": null,
+    "publication_pictures": [
+      {
+        "id": "ebbfa5c0-943f-4aff-af6b-3483216fee62",
+        "publication_picture": "https://buscapets.s3.amazonaws.com/789c1ce5c71db4e8db8a-cat-5590839_640.jpg",
+        "publication_id": "7bc528e8-a0de-4580-9394-a244d23c22aa",
+        "created_at": "2022-10-19T01:05:36.534Z",
+        "updated_at": "2022-10-19T01:05:36.534Z",
+        "deleted_at": null
+      }
+    ]
+  },
+  {
+    "id": "e07f5c68-b410-40c6-b5f8-5630bbea66fd",
+    "user_id": "dc50442c-3e9c-4d04-a813-32de6f53e342",
+    "title": "Labrador preto perdido perto do IFRN",
+    "description": "Estava com meu cachorro passeando e ele viu um gato. Não consegui segurar, a coleira quebrou e ele saiu correndo. Não o encontrei mais. Ele tem uma coleira azul, seu nome é Paulo Oliveira",
+    "pet_name": "Paulo Oliveira",
+    "type": "adoption",
+    "sex": "male",
+    "last_location": {
+      "type": "Point",
+      "coordinates": [
+        -35.20381557192571,
+        -5.809391537690507
+      ]
+    },
+    "disappearance_date": "2022-10-10T03:00:00.000Z",
+    "created_at": "2022-10-19T01:03:21.987Z",
+    "updated_at": "2022-10-19T01:03:21.987Z",
+    "deleted_at": null,
+    "publication_pictures": [
+      {
+        "id": "c5872686-5d15-4a32-afd0-8026aadfa497",
+        "publication_picture": "https://buscapets.s3.amazonaws.com/50bd8d8a6bbc01bc275d-jezael-melgoza-2FiXtdnVhjQ-unsplash.jpg",
+        "publication_id": "e07f5c68-b410-40c6-b5f8-5630bbea66fd",
+        "created_at": "2022-10-19T01:03:22.052Z",
+        "updated_at": "2022-10-19T01:03:22.052Z",
+        "deleted_at": null
+      }
+    ]
+  },
+  {
+    "id": "ef626e37-8c58-4f8f-95a6-f80328305ad6",
+    "user_id": "dc50442c-3e9c-4d04-a813-32de6f53e342",
+    "title": "Pinguim caiu do transporte para o Aquário Natal",
+    "description": "Pinguim estava em transporte para um novo zoológico quando de alguma forma conseguiu escapar do caminhão refrigerado. O nome dele é Kowalski e é preto e branco.",
+    "pet_name": "Kowalski",
+    "type": "missing",
+    "sex": "male",
+    "last_location": {
+      "type": "Point",
+      "coordinates": [
+        -35.21041187557696,
+        -5.810775103569705
+      ]
+    },
+    "disappearance_date": "2022-02-21T03:00:00.000Z",
+    "created_at": "2022-10-28T18:01:19.520Z",
+    "updated_at": "2022-10-28T18:01:19.520Z",
+    "deleted_at": null,
+    "publication_pictures": [
+      {
+        "id": "12ca9332-1f88-4dc8-9fb3-f34ae99c8c5a",
+        "publication_picture": "https://buscapets.s3.amazonaws.com/8d588d7bf74d68f3d574-pinguim.jpg",
+        "publication_id": "ef626e37-8c58-4f8f-95a6-f80328305ad6",
+        "created_at": "2022-10-28T18:01:19.549Z",
+        "updated_at": "2022-10-28T18:01:19.549Z",
+        "deleted_at": null
+      }
+    ]
+  }
+]
