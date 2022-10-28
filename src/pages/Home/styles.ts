@@ -1,28 +1,39 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 `;
 
 export const ContainerContent = styled.main`
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
+  position: relative;
+  height: 100%;
 `;
 
 export const ContainerPublications = styled.div`
   display: flex;
+  position: relative;
+  width: 100%;
   flex-direction: column;
-  padding: 2rem;
+
+  ${media.greaterThan("medium")`
+    width: 50%;
+    border-right: 1px solid ${({ theme }) => theme.colors["gray/300"]};
+  `}
 `;
 
 export const ContainerFilterPublications = styled.div`
+  padding: 2rem;
   display: flex;
+  position: sticky;
+  background-color: ${({ theme }) => theme.colors["gray/50"]};
+  top: 8rem;
+  z-index: 20;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem 0 2rem 0;
 `;
 
 export const ContainerFilterPublicationInput = styled.form`
@@ -33,6 +44,10 @@ export const ContainerFilterPublicationInput = styled.form`
   border-radius: 2rem;
   width: 24rem;
   border: 1px solid ${({ theme }) => theme.colors["gray/300"]};
+
+  ${media.greaterThan("large")`
+    width: 31rem;
+  `}
 `;
 
 export const FilterPublicationInput = styled.input`
@@ -41,6 +56,10 @@ export const FilterPublicationInput = styled.input`
   width: 85%;
   font-size: 1.2rem;
   background-color: transparent;
+
+  ${media.greaterThan("large")`
+    width: 90%;
+  `}
 `;
 
 export const SubmitFilterPublicationButton = styled.div`
@@ -72,6 +91,7 @@ export const FilterPublicationsButton = styled.div`
 `;
 
 export const ContainerPublicationsContent = styled.div`
+  padding: 2rem;
   display: flex;
   flex-direction: column;
 `;
@@ -90,6 +110,10 @@ export const PublicationQtdResult = styled.h2`
 
 export const PublicationsGrid = styled.div`
   display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+
+  ${media.greaterThan("large")`
+    grid-gap: 3rem;
+  `}
 `;

@@ -3,8 +3,11 @@ import { Navbar } from "../../components/Navbar";
 import PublicationPreview from "../../components/PublicationPreview";
 import teste_data from "./test.json";
 import * as S from "./styles";
+import Places from "../../components/Map";
+import { useState } from "react";
 
 export const Home = () => {
+  const [showInfoPopById, setShowInfoPopById] = useState<string | null>(null); //TODO: colocar isso globalmente
   return (
     <S.Container>
       <Navbar />
@@ -12,7 +15,7 @@ export const Home = () => {
         <S.ContainerPublications>
           <S.ContainerFilterPublications>
             <S.ContainerFilterPublicationInput>
-              <S.FilterPublicationInput placeholder="Procure um publicação..." />
+              <S.FilterPublicationInput placeholder="Procure uma publicação..." />
               <S.SubmitFilterPublicationButton>
                 <MagnifyingGlass size={20} weight="regular" />
               </S.SubmitFilterPublicationButton>
@@ -44,11 +47,14 @@ export const Home = () => {
                   description={publication.description}
                   address="Natal/RN - R. Jaguarari, 1826 - Lagoa Nova"
                   created_at={publication.created_at}
+                  setShowInfoPopById={setShowInfoPopById}
                 />
               ))}
             </S.PublicationsGrid>
           </S.ContainerPublicationsContent>
         </S.ContainerPublications>
+
+        <Places places={teste_data} />
       </S.ContainerContent>
     </S.Container>
   );
