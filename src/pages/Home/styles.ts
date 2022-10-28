@@ -10,7 +10,7 @@ export const Container = styled.div`
 export const ContainerContent = styled.main`
   display: flex;
   position: relative;
-  height: 100%;
+  min-height: 100vh;
 `;
 
 export const ContainerPublications = styled.div`
