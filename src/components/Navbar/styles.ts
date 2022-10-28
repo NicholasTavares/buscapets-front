@@ -2,6 +2,9 @@ import styled from "styled-components";
 import media from "styled-media-query";
 
 export const Container = styled.nav`
+  position: sticky;
+  top: 0;
+  z-index: 20;
   width: 100%;
   display: flex;
   justify-content: left;
@@ -9,9 +12,11 @@ export const Container = styled.nav`
   padding: 0 1rem;
   height: 6rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors["gray/300"]};
+  background-color: ${({ theme }) => theme.colors["gray/50"]};
 
   ${media.greaterThan("medium")`
     padding: 0 2rem;
+    height: 8rem;
   `}
 `;
 
@@ -37,7 +42,7 @@ export const ContainerButtons = styled.div`
 `;
 
 export const Text = styled.span`
-  margin-left: 0.5rem;
+  margin-left: 1rem;
   color: ${({ theme }) => theme.colors["gray/900"]};
   font-size: 1.25rem;
 `;
@@ -51,7 +56,7 @@ export const TextButton = styled.div`
   border-radius: 2rem;
   font-weight: 600;
   color: ${({ theme }) => theme.colors["gray/900"]};
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 
   & > svg {
     transform: rotate(-45deg);
@@ -77,8 +82,8 @@ export const PublishButton = styled.div`
   border: 1px solid ${({ theme }) => theme.colors["gray/300"]};
   font-weight: 600;
   color: ${({ theme }) => theme.colors["gray/50"]};
-  font-size: 1.25rem;
-  margin-right: 1rem;
+  font-size: 1.3rem;
+  margin-left: 1.5rem;
   transition: all 500ms;
 
   &:hover {
@@ -91,6 +96,10 @@ export const PublishButton = styled.div`
     background-color: ${({ theme }) => theme.colors["lime/700"]};
     transform: scale(1.05);
   }
+
+  ${media.greaterThan("medium")`
+    margin-right: 1.5rem;
+  `}
 `;
 
 export const SignInButton = styled.div`
@@ -103,7 +112,7 @@ export const SignInButton = styled.div`
   border: 1px solid ${({ theme }) => theme.colors["gray/300"]};
   font-weight: 600;
   color: ${({ theme }) => theme.colors["gray/900"]};
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   transition: all 500ms;
 
   &:hover {
