@@ -1,6 +1,6 @@
-import { Login } from './index';
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import media from "styled-media-query";
 
 export const Container = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ export const ContainerLogo = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 12rem;
+  width: 13rem;
 `;
 
 export const MainContainer = styled.main`
@@ -25,18 +25,23 @@ export const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30rem;
+  transform: translateY(-10%);
+
+  ${media.greaterThan("medium")`
+    transform: translateY(0);
+  `}
 `;
 
 export const WelcomeText = styled.h1`
   font-size: 3rem;
-  color: ${({ theme }) => theme.colors["gray/900"]};
+  color: ${({ theme }) => theme.colors["gray/700"]};
   margin-bottom: 2rem;
+  font-weight: 400;
 `;
 
 export const GoogleLogInButton = styled.div`
   cursor: pointer;
-  border: 1px solid ${({ theme }) => theme.colors["gray/400"]};
+  border: 1px solid ${({ theme }) => theme.colors["gray/300"]};
   border-radius: 1rem;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
@@ -68,8 +73,8 @@ export const OrText = styled.span`
   color: ${({ theme }) => theme.colors["gray/400"]};
 `;
 
-export const LogInForm = styled.form`
-  width: 100%;
+export const FormContainer = styled.form`
+  width: 30rem;
   display: flex;
   flex-direction: column;
 `;
@@ -128,20 +133,24 @@ export const CheckBoxRememberPassword = styled.input`
 `;
 
 export const ForgetPasswordLink = styled(Link)`
-  color: ${({ theme }) => theme.colors["gray/900"]};
-  text-decoration-color: ${({ theme }) => theme.colors["gray/300"]} ;
-  font-size: 0.8rem;
+  color: ${({ theme }) => theme.colors["gray/700"]};
+  text-decoration: none;
+  font-size: 1.2rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
-export const LogInButton = styled.button`
+export const SubmitButton = styled.button`
   width: 100%;
   border-radius: 1rem;
   padding-top: 0.9rem;
   padding-bottom: 0.9rem;
   font-size: 1.6rem;
   border: none;
-  background-color:  ${({ theme }) => theme.colors["gray/700"]};
-  color:  ${({ theme }) => theme.colors["white"]};
+  background-color: ${({ theme }) => theme.colors["gray/700"]};
+  color: ${({ theme }) => theme.colors["white"]};
   margin-bottom: 1rem;
 `;
 
@@ -150,13 +159,37 @@ export const RegisterLinkContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
 `;
 
 export const RegisterLinkText = styled.span`
-  color:  ${({ theme }) => theme.colors["gray/400"]};
+  color: ${({ theme }) => theme.colors["gray/700"]};
+  font-size: 1rem;
+  margin-right: 0.2rem;
+`;
+
+export const RegisterLinkImgContainer = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const RegisterLink = styled(Link)`
-  color:  ${({ theme }) => theme.colors["gray/900"]};
+  color: ${({ theme }) => theme.colors["gray/900"]};
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const RegisterImgContainer = styled.div`
+  display: flex;
+`;
+
+export const ImgVector = styled.img`
+  font-size: 1rem;
+  position: absolute;
+  top: 110%;
 `;
