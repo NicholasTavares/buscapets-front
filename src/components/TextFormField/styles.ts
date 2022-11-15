@@ -37,7 +37,7 @@ export const Input = styled.input`
   font-size: 1.3rem;
   padding: 0.4rem 0;
   padding-right: 8%;
-  border-bottom: 1px solid ${({ theme }) => theme.colors["gray/400"]};
+  border-bottom: 1.5px solid ${({ theme }) => theme.colors["gray/400"]};
   transition: 500ms border-color;
 
   &:focus {

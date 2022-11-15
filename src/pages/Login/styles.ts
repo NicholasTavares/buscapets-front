@@ -10,6 +10,37 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors["gray/50"]};
 `;
 
+export const ContainerIllustrationForm = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+`;
+
+export const ContainerIllustration = styled.div`
+  display: none;
+
+  ${media.greaterThan("medium")`
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `}
+`;
+
+export const Illustration = styled.img`
+  width: 38rem;
+
+  ${media.greaterThan("large")`
+    width: 50rem;
+  `}
+
+  ${media.greaterThan("huge")`
+    width: 60rem;
+  `}
+`;
+
 export const ContainerLogo = styled.div`
   display: flex;
   justify-content: left;
@@ -18,17 +49,22 @@ export const ContainerLogo = styled.div`
 
 export const Logo = styled.img`
   width: 13rem;
+
+  ${media.greaterThan("medium")`
+    width: 15rem;
+  `}
 `;
 
 export const MainContainer = styled.main`
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 32rem;
   transform: translateY(-10%);
 
   ${media.greaterThan("medium")`
     transform: translateY(0);
+    width: 45%;
   `}
 `;
 
@@ -50,6 +86,10 @@ export const GoogleLogInButton = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+
+  ${media.greaterThan("medium")`
+    width: 30rem;
+  `}
 `;
 
 export const GoogleIcon = styled.img`
