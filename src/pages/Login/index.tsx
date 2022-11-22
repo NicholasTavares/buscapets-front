@@ -22,7 +22,7 @@ export const Login = () => {
     if (inputRefEmail.current?.value && inputRefPassword.current?.value) {
       mutate({
         email: inputRefEmail.current.value,
-        password: inputRefPassword.current?.value,
+        password: inputRefPassword.current.value,
       });
     }
   };
