@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
   // increase performance rather google fonts link html
   @font-face {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     src: url(${Montserrat}) format('truetype');

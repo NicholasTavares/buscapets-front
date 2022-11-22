@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ export const Container = styled.div`
 export const ContainerContent = styled.main`
   display: flex;
   position: relative;
-  height: 100%;
+  min-height: 100vh;
 `;
 
 export const ContainerPublications = styled.div`
