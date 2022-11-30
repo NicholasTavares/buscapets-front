@@ -6,7 +6,7 @@ import * as S from "./styles";
 import Places from "../../components/Map";
 import { useState } from "react";
 
-export const Home = () => {
+const Home = () => {
   const [showInfoPopById, setShowInfoPopById] = useState<string | null>(null); //TODO: colocar isso globalmente
   return (
     <S.Container>
@@ -59,3 +59,5 @@ export const Home = () => {
     </S.Container>
   );
 };
+
+export default Home;

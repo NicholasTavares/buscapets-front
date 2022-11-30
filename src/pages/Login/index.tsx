@@ -8,7 +8,7 @@ import vector from "../../assets/vector-forgot-password.svg";
 import { TextFormField } from "../../components/TextFormField";
 import * as S from "./styles";
 
-export const Login = () => {
+const Login = () => {
   const inputRefEmail = createRef<HTMLInputElement>();
   const inputRefPassword = createRef<HTMLInputElement>();
   const { mutate, isLoading } = useMutation(signInPost, {
@@ -83,3 +83,5 @@ export const Login = () => {
     </S.Container>
   );
 };
+
+export default Login;

@@ -1,5 +1,7 @@
+import media from 'styled-media-query';
 import styled from "styled-components";
 import { keyframes } from "styled-components";
+
 
 type CenterContainer = {
   center?: boolean;
@@ -28,8 +30,8 @@ export const Container = styled.div<CenterContainer>`
 `;
 
 export const Loading = styled.div`
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   border: 2px solid ${({ theme }) => theme.colors["gray/400"]};
   border-top-color: #41d9d9;
@@ -37,4 +39,9 @@ export const Loading = styled.div`
   animation-iteration-count: infinite;
   animation-duration: 1s;
   animation-timing-function: linear;
+
+  ${media.greaterThan("medium")`
+    width: 4rem;
+    height: 4rem;
+  `}
 `;
