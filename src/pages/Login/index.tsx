@@ -1,19 +1,25 @@
 import { createRef, FormEvent } from "react";
 import { useMutation } from "react-query";
+import { useNavigate } from "react-router-dom";
 import { signInPost } from "../../api/signInAPI";
 import logoDark from "../../assets/buscapets-logo-dark.png";
 import googleIcon from "../../assets/google-icon.png";
 import dog_walking from "../../assets/undraw_dog_walking.png";
 import vector from "../../assets/vector-forgot-password.svg";
 import { TextFormField } from "../../components/TextFormField";
+import { useAuth } from "../../hooks/useAuth";
 import * as S from "./styles";
 
 const Login = () => {
+  const { state, setState } = useAuth();
+  const navigate = useNavigate();
   const inputRefEmail = createRef<HTMLInputElement>();
   const inputRefPassword = createRef<HTMLInputElement>();
   const { mutate, isLoading } = useMutation(signInPost, {
     onSuccess: ({ token }) => {
-      console.log(token);
+      localStorage.setItem("jwt", token);
+      setState({ ...state, auth: token });
+      navigate("/");
     },
   });
 
