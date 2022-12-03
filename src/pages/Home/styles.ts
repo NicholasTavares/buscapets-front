@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -27,14 +26,20 @@ export const ContainerPublications = styled.div`
 `;
 
 export const ContainerFilterPublications = styled.div`
-  padding: 2rem;
+  //TODO: adicionar box-shadow ao fazer scroll para baixo
+  padding: 1.5rem;
   display: flex;
   position: sticky;
   background-color: ${({ theme }) => theme.colors["gray/50"]};
-  top: 8rem;
+  top: 6rem;
   z-index: 20;
   justify-content: space-between;
   align-items: center;
+
+  ${media.greaterThan("medium")`
+    top: 8rem;
+    padding: 2rem;
+  `}
 `;
 
 export const ContainerFilterPublicationInput = styled.form`

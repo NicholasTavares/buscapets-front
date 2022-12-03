@@ -183,6 +183,7 @@ export const ForgetPasswordLink = styled(Link)`
 `;
 
 export const SubmitButton = styled.button`
+  cursor: pointer;
   width: 100%;
   border-radius: 1rem;
   padding-top: 0.9rem;

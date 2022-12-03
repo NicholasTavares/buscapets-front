@@ -20,7 +20,7 @@ export const Navbar = () => {
         </S.TextButton>
         <S.TextButton>Minhas publicações</S.TextButton>
         <S.PublishButton>+ Publicar</S.PublishButton>
-        <S.SignInButton>Entrar</S.SignInButton>
+        <S.SignInButton to="/login">Entrar</S.SignInButton>
       </S.ContainerButtons>
     </S.Container>
   );

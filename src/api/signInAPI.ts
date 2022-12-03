@@ -1,4 +1,4 @@
-import baseURL from "./baseURL";
+import { APIBaseURL } from "./baseURL";
 
 type SignInPost = {
   email: string;
@@ -13,7 +13,7 @@ export const signInPost = async ({
   email,
   password,
 }: SignInPost): Promise<SignInResponse> => {
-  const response = await baseURL.post("/auth/login", {
+  const response = await APIBaseURL.post("/auth/login", {
     email,
     password,
   });

@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import media from "styled-media-query";
 
 export const Container = styled.nav`
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 25;
   width: 100%;
   display: flex;
   justify-content: left;
@@ -102,7 +103,8 @@ export const PublishButton = styled.div`
   `}
 `;
 
-export const SignInButton = styled.div`
+export const SignInButton = styled(Link)`
+  text-decoration: none;
   cursor: pointer;
   display: none;
   padding: 0.7rem 2rem;
@@ -118,6 +120,7 @@ export const SignInButton = styled.div`
   &:hover {
     border-color: ${({ theme }) => theme.colors["lime/500"]};
     color: ${({ theme }) => theme.colors["lime/500"]};
+    text-decoration: underline;
   }
 
   &:active {

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import media from "styled-media-query";
 
@@ -38,7 +39,8 @@ export const ContainerOptions = styled.div`
   flex-direction: column;
 `;
 
-export const Option = styled.div`
+export const Option = styled(Link)`
+  text-decoration: none;
   cursor: pointer;
   display: flex;
   justify-content: space;
