@@ -9,19 +9,19 @@ export const DropDownItems = () => {
       <List size={20} onClick={() => setOpen(!open)} />
       <S.Container open={open}>
         <S.ContainerOptions>
-          <S.Option>
+          <S.Option to="/login">
             <SignIn size={18} weight="light" />
             Entrar
           </S.Option>
-          <S.Option>
+          <S.Option to="/">
             <SquaresFour size={18} weight="light" />
             Minhas publicações
           </S.Option>
-          <S.Option>
+          <S.Option to="/">
             <Dog size={18} weight="light" />
             Petshops
           </S.Option>
-          <S.Option>
+          <S.Option to="/">
             <Info size={18} weight="light" />
             Ajuda
           </S.Option>
