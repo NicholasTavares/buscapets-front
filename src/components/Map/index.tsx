@@ -14,8 +14,11 @@ type PlaceProps = {
   id: string;
   title: string;
   description: string;
-  pet_name: string;
-  publication_pictures: PublicationPictureProps[];
+  publication_pictures: [
+    {
+      publication_picture: string
+    }
+  ];
   type: string;
   last_location: {
     type: string;
