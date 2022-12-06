@@ -5,9 +5,14 @@ import teste_data from "./test.json";
 import * as S from "./styles";
 import Places from "../../components/Map";
 import { useState } from "react";
+import { useQuery } from "react-query";
+import { publicationsGet } from "../../api/publicationAPI";
 
 const Home = () => {
   const [showInfoPopById, setShowInfoPopById] = useState<string | null>(null); //TODO: colocar isso globalmente
+  const { data: publications, isFetching } = useQuery(["publications"], publicationsGet, {
+    staleTime: 60 * 60 * 5
+  });
   return (
     <S.Container>
       <Navbar />
@@ -35,7 +40,7 @@ const Home = () => {
             </S.ContainerPublicationQtdResult>
 
             <S.PublicationsGrid>
-              {teste_data.map((publication) => (
+              {(!isFetching && publications?.length) && publications.map((publication) => (
                 <PublicationPreview
                   key={publication.id}
                   id={publication.id}
@@ -54,7 +59,7 @@ const Home = () => {
           </S.ContainerPublicationsContent>
         </S.ContainerPublications>
 
-        <Places places={teste_data} />
+        {(!isFetching && publications?.length) && <Places places={publications} />}
       </S.ContainerContent>
     </S.Container>
   );
