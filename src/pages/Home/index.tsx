@@ -1,12 +1,9 @@
 import { Faders, MagnifyingGlass } from "phosphor-react";
 import { Navbar } from "../../components/Navbar";
 import PublicationPreview from "../../components/PublicationPreview";
-import teste_data from "./test.json";
 import * as S from "./styles";
 import Places from "../../components/Map";
 import { useState } from "react";
-import { useQuery } from "react-query";
-import { publicationsGet } from "../../api/publicationAPI";
 import { usePublications } from "../../hooks/usePublications";
 
 const Home = () => {
