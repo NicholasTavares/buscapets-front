@@ -1,5 +1,6 @@
 import { Faders, MagnifyingGlass } from "phosphor-react";
 import { Navbar } from "../../components/Navbar";
+import { Footer } from "../../components/Footer";
 import PublicationPreview from "../../components/PublicationPreview";
 import * as S from "./styles";
 import Places from "../../components/Map";
@@ -56,7 +57,9 @@ const Home = () => {
         </S.ContainerPublications>
 
         {(!isFetching && publications?.length) && <Places places={publications} />}
+        
       </S.ContainerContent>
+      <Footer/>
     </S.Container>
   );
 };
