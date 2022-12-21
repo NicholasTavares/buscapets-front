@@ -1,6 +1,8 @@
+import { twitterLogo } from './styles';
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import media from "styled-media-query";
+import { Envelope, TwitterLogo, InstagramLogo } from "phosphor-react";
 
 export const mainContainer = styled.footer`
   width: 100%;
@@ -76,28 +78,53 @@ export const socialMediaContainer = styled.div`
   gap: 1rem;
 `;
 
-export const twitterLink = styled(Link)`
+export const twitterLink = styled.a`
+  background-color: ${({theme}) => theme.colors["white"]};
+  border-radius: 50%;
+  padding: 0.1rem;
+  
+  &:hover{
+    cursor: pointer;
+  }
 
 `;
 
-export const instagramLink = styled(Link)`
-
+export const logoTwitter = styled(TwitterLogo)`
+  color: ${({theme}) => theme.colors["lime/500"]};
+  width: 2.5rem;
+  height: 2.5rem;
 `;
 
-export const emailLink = styled(Link)`
-
+export const instagramLink = styled.a`
+  background-color: ${({theme}) => theme.colors["white"]};
+  border-radius: 50%;
+  padding: 0.1rem;
+  
+  &:hover{
+    cursor: pointer;
+  }
 `;
 
-export const twitterLogo = styled.img`
-
+export const logoInstagram = styled(InstagramLogo)`
+  color: ${({theme}) => theme.colors["lime/500"]};
+  width: 2.5rem;
+  height: 2.5rem;
 `;
 
-export const instagramLogo = styled.img`
-
+export const emailLink = styled.a`
+  background-color: ${({theme}) => theme.colors["white"]};
+  border-radius: 50%;
+  padding: 0.1rem;
+  
+  &:hover{
+    cursor: pointer;
+  }
 `;
 
-export const emailLogo = styled.img`
-
+export const logoEmail = styled(Envelope)`
+  color: ${({theme}) => theme.colors["lime/500"]};
+  width: 2.5rem;
+  height: 2.5rem;
 `;
 
 export const footerText = styled.p`

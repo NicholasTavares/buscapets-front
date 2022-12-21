@@ -1,8 +1,6 @@
 import * as S from "./styles";
 import logo from "../../assets/buscapets-logo-footer.svg";
-import twitterLogo from "../../assets/twitter-logo.svg";
-import instagramLogo from "../../assets/instagram-logo.svg";
-import emailLogo from "../../assets/email-logo.svg";
+
 
 export const Footer = () => {
   return (
@@ -17,19 +15,16 @@ export const Footer = () => {
         <S.privacyPolicyLink to="">Política de privacidade</S.privacyPolicyLink>
       </S.linksContainer>
       <S.socialMediaContainer>
-        <S.instagramLink to="">
-          <S.instagramLogo alt="Logo do instagram" src={instagramLogo} />
-
+        <S.instagramLink href="https://www.instagram.com/" target="_blank">
+          <S.logoInstagram />
         </S.instagramLink>
 
-        <S.twitterLink to="">
-          <S.twitterLogo alt="Logo do twitter" src={twitterLogo} />
-
+        <S.twitterLink href="https://twitter.com/explore" target="_blank">
+          <S.logoTwitter />
         </S.twitterLink>
 
-        <S.emailLink to="">
-          <S.emailLogo alt="Logo do instagram" src={emailLogo} />
-
+        <S.emailLink href="" target="_blank">
+          <S.logoEmail />
         </S.emailLink>
       </S.socialMediaContainer>
       <S.footerText>Todos os direitos reservados ao Buscapets</S.footerText>
