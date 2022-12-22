@@ -6,7 +6,7 @@ type LoadingProps = {
 
 export const Loading = ({ center }: LoadingProps) => {
   return (
-    <S.Container center={center}>
+    <S.Container data-testid="loading" center={center}>
       <S.Loading />
     </S.Container>
   );
