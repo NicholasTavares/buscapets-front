@@ -1,18 +1,14 @@
 import { Faders, MagnifyingGlass } from "phosphor-react";
 import { Navbar } from "../../components/Navbar";
 import PublicationPreview from "../../components/PublicationPreview";
-import teste_data from "./test.json";
 import * as S from "./styles";
 import Places from "../../components/Map";
 import { useState } from "react";
-import { useQuery } from "react-query";
-import { publicationsGet } from "../../api/publicationAPI";
+import { usePublications } from "../../hooks/usePublications";
 
 const Home = () => {
   const [showInfoPopById, setShowInfoPopById] = useState<string | null>(null); //TODO: colocar isso globalmente
-  const { data: publications, isFetching } = useQuery(["publications"], publicationsGet, {
-    staleTime: 60 * 60 * 5
-  });
+  const { publications, isFetching } = usePublications();
   return (
     <S.Container>
       <Navbar />
