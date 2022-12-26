@@ -3,6 +3,7 @@ import logo from "../../assets/buscapets-logo-footer.svg";
 
 
 export const Footer = () => {
+  const date = new Date();
   return (
     <S.mainContainer>
       <S.logoLink to="/">
@@ -27,7 +28,7 @@ export const Footer = () => {
           <S.logoEmail />
         </S.emailLink>
       </S.socialMediaContainer>
-      <S.footerText>Todos os direitos reservados ao Buscapets</S.footerText>
+      <S.footerText>Todos os direitos reservados ao Buscapets {date.getFullYear()}</S.footerText>
     </S.mainContainer>
   )
 };
