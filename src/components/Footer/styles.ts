@@ -13,6 +13,8 @@ export const mainContainer = styled.footer`
   padding-bottom: 1.2rem;;
   background-color: ${({ theme }) => theme.colors["gray/900"]};
   align-items: center;
+
+  
 `;
 
 export const logoLink = styled(Link)`
@@ -35,8 +37,11 @@ export const homeLink = styled(Link)`
 
   ${media.greaterThan("medium")`
     font-size:1.2rem;
-
   `}
+
+  :hover{
+    text-decoration: underline;
+  }
 `;
 
 export const aboutUsLink = styled(Link)`
@@ -48,6 +53,10 @@ export const aboutUsLink = styled(Link)`
     font-size:1.2rem;
 
   `}
+
+  :hover{
+    text-decoration: underline;
+  }
 `;
 
 export const rateUsLink = styled(Link)`
@@ -59,6 +68,10 @@ export const rateUsLink = styled(Link)`
     font-size:1.2rem;
 
   `}
+
+  :hover{
+    text-decoration: underline;
+  }
 `;
 
 export const privacyPolicyLink = styled(Link)`
@@ -70,6 +83,10 @@ export const privacyPolicyLink = styled(Link)`
     font-size:1.2rem;
 
   `}
+
+  :hover{
+    text-decoration: underline;
+  }
 `;
 
 export const socialMediaContainer = styled.div`
@@ -80,7 +97,7 @@ export const socialMediaContainer = styled.div`
 export const twitterLink = styled.a`
   background-color: ${({theme}) => theme.colors["white"]};
   border-radius: 50%;
-  padding: 0.1rem;
+  padding: 0.2rem;
   
   &:hover{
     cursor: pointer;
@@ -97,7 +114,7 @@ export const logoTwitter = styled(TwitterLogo)`
 export const instagramLink = styled.a`
   background-color: ${({theme}) => theme.colors["white"]};
   border-radius: 50%;
-  padding: 0.1rem;
+  padding: 0.2rem;
   
   &:hover{
     cursor: pointer;
@@ -113,7 +130,7 @@ export const logoInstagram = styled(InstagramLogo)`
 export const emailLink = styled.a`
   background-color: ${({theme}) => theme.colors["white"]};
   border-radius: 50%;
-  padding: 0.1rem;
+  padding: 0.2rem;
   
   &:hover{
     cursor: pointer;
