@@ -10,5 +10,3 @@ ADD . .
 RUN yarn
 
 ENTRYPOINT ["/entrypoint.sh"]
-
-CMD ["yarn", "dev"]
