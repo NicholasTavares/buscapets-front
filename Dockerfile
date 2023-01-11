@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:16.15-alpine
 
 WORKDIR /app
 
@@ -7,6 +7,7 @@ RUN chmod +x /entrypoint.sh
 
 ADD . .
 
-RUN yarn
+RUN yarn install && yarn cache clean
 
 ENTRYPOINT ["/entrypoint.sh"]
+EXPOSE 80
