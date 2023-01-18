@@ -1,0 +1,16 @@
+pipeline {
+	agent any
+	stages {
+		stage('Build') {
+			steps {
+				sh 'docker build -t antoniosgjr/buscapets-front:latest .'
+			}
+		}
+		stage('Push') {
+			steps {
+				sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
+				sh 'docker push antoniosgjr/buscapets-front:latest'
+			}
+		}
+	}
+}
