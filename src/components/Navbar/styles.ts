@@ -21,7 +21,7 @@ export const Container = styled.nav`
   `}
 `;
 
-export const LogoContainer = styled.div`
+export const LogoContainer = styled(Link)`
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -126,6 +126,37 @@ export const SignInButton = styled(Link)`
   &:active {
     border-color: ${({ theme }) => theme.colors["lime/700"]};
     color: ${({ theme }) => theme.colors["lime/700"]};
+    transform: scale(1.05);
+  }
+
+  ${media.greaterThan("medium")`
+    display: flex;
+  `}
+`;
+
+export const LogOutButton = styled(Link)`
+  text-decoration: none;
+  cursor: pointer;
+  display: none;
+  padding: 0.7rem 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  border: 1px solid ${({ theme }) => theme.colors["gray/300"]};
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors["gray/900"]};
+  font-size: 1.3rem;
+  transition: all 500ms;
+
+  &:hover {
+    border-color: ${({ theme }) => theme.colors["rose/600"]};
+    color: ${({ theme }) => theme.colors["rose/600"]};
+    text-decoration: underline;
+  }
+
+  &:active {
+    border-color: ${({ theme }) => theme.colors["rose/700"]};
+    color: ${({ theme }) => theme.colors["rose/700"]};
     transform: scale(1.05);
   }
 
