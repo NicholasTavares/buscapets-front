@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import DogImg from "../../assets/dog-not-found.svg";
+import * as Assets from "../../assets/index";
 import { Navbar } from "../../components/Navbar";
 
 const NotFound = () => {
@@ -8,7 +8,7 @@ const NotFound = () => {
       <Navbar></Navbar>
 
       <S.Main>
-        <S.Img alt="Dog" src={DogImg} />
+        <S.Img alt="Dog" src={Assets.DogNotFoundIcon} />
         <S.H1>Página não encontrada</S.H1>
         <S.LinkPage to="/">Página Inicial</S.LinkPage>
       </S.Main>

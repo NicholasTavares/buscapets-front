@@ -201,26 +201,26 @@ export const SubmitButton = styled.button`
   margin-bottom: 1rem;
 `;
 
-export const RegisterLinkContainer = styled.div`
+export const LoginLinkContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-export const RegisterLinkText = styled.span`
+export const LoginLinkText = styled.span`
   color: ${({ theme }) => theme.colors["gray/700"]};
   font-size: 1rem;
   margin-right: 0.2rem;
 `;
 
-export const RegisterLinkImgContainer = styled.div`
+export const LoginLinkImgContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
 `;
 
-export const RegisterLink = styled(Link)`
+export const LoginLink = styled(Link)`
   color: ${({ theme }) => theme.colors["gray/900"]};
   text-decoration: none;
   font-size: 1rem;
@@ -231,7 +231,12 @@ export const RegisterLink = styled(Link)`
   }
 `;
 
-export const RegisterImgContainer = styled.div`
+export const LoginError = styled.div`
+  font-size: 0.8rem;
+  color: ${({ theme }) => theme.colors["rose/600"]};
+`
+
+export const LoginImgContainer = styled.div`
   display: flex;
 `;
 
