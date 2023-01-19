@@ -62,3 +62,9 @@ export const SeePasswordIcon = styled(Eye)`
 export const DontSeePasswordIcon = styled(EyeSlash)`
   font-size: 1.5rem;
 `;
+
+export const FieldError = styled.div`
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: ${({ theme }) => theme.colors["rose/600"]};
+`
