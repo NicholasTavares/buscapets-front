@@ -47,6 +47,12 @@ export const ContainerLogo = styled.div`
   align-items: center;
 `;
 
+export const LogoContainer = styled(Link)`
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+`
+
 export const Logo = styled.img`
   width: 13rem;
 
