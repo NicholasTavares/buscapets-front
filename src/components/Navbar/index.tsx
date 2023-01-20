@@ -14,7 +14,7 @@ export const Navbar = () => {
       <DropDownItems />
       <S.LogoContainer to="/">
         <S.Logo
-          src={Assets.LogoDark}
+          src={Assets.GoogleIcon}
           alt="Logomarca do Buscapets com uma lupa e nome buscapets"
         />
       </S.LogoContainer>
