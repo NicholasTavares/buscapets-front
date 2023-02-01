@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import { DropDownItems } from "../DropDownItems";
 import { useAuth } from "../../hooks/useAuth";
 import * as S from "./styles";
@@ -5,6 +6,8 @@ import * as Assets from "../../assets/index";
 
 export const Navbar = () => {
   const { state, setState } = useAuth();
+  const location = useLocation();
+
   const logout = () => {
     localStorage.removeItem('jwt');
     setState({ auth: false });
@@ -14,7 +17,7 @@ export const Navbar = () => {
       <DropDownItems />
       <S.LogoContainer to="/">
         <S.Logo
-          src={Assets.GoogleIcon}
+          src={Assets.LogoDark}
           alt="Logomarca do Buscapets com uma lupa e nome buscapets"
         />
       </S.LogoContainer>
@@ -24,7 +27,7 @@ export const Navbar = () => {
           <PawPrint size={20} weight="regular" /> <S.Text>Petshops</S.Text>
         </S.TextButton> */}
         <S.TextButton>Minhas publicações</S.TextButton>
-        <S.PublishButton>+ Publicar</S.PublishButton>
+        {location.pathname !== '/publish' && <S.PublishButton to="/publish">+ Publicar</S.PublishButton>}
         {state.auth ? <S.LogOutButton onClick={() => logout()} to="/login">Sair</S.LogOutButton> : <S.SignInButton to="/login">Entrar</S.SignInButton>}
         
       </S.ContainerButtons>

@@ -32,7 +32,7 @@ const Home = () => {
           <S.ContainerPublicationsContent>
             <S.ContainerPublicationQtdResult>
               <S.PublicationQtdResult>
-                20 pets encontrados na sua região
+                {publications?.length} pets encontrados na sua região
               </S.PublicationQtdResult>
             </S.ContainerPublicationQtdResult>
 
@@ -47,7 +47,7 @@ const Home = () => {
                   tag={publication.type}
                   title={publication.title}
                   description={publication.description}
-                  address="Natal/RN - R. Jaguarari, 1826 - Lagoa Nova"
+                  address={publication.address}
                   created_at={publication.created_at}
                   setShowInfoPopById={setShowInfoPopById}
                 />
@@ -57,9 +57,9 @@ const Home = () => {
         </S.ContainerPublications>
 
         {(!isFetching && publications?.length) && <Places places={publications} />}
-        
+
       </S.ContainerContent>
-      <Footer/>
+      <Footer />
     </S.Container>
   );
 };

@@ -8,7 +8,7 @@ import * as S from "./styles";
 
 const Register = () => {
   const navigate = useNavigate();
-  const [errors, setErros]  = useState<{response:{data:{message: string, statusCode: number}}} | null>(null)
+  const [errors, setErros] = useState<{ response: { data: { message: string, statusCode: number } } } | null>(null)
   const inputRefName = createRef<HTMLInputElement>();
   const inputRefEmail = createRef<HTMLInputElement>();
   const inputRefPhone = createRef<HTMLInputElement>();
@@ -25,7 +25,7 @@ const Register = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (inputRefName.current?.value && inputRefEmail.current?.value && inputRefPassword.current?.value && 
+    if (inputRefName.current?.value && inputRefEmail.current?.value && inputRefPassword.current?.value &&
       inputRefPassword.current?.value && inputRefPhone.current?.value && inputRefPasswordConfirm.current?.value) {
       mutate({
         name: inputRefEmail.current.value,
@@ -36,8 +36,6 @@ const Register = () => {
       });
     }
   };
-
-  console.log("ERRORRRR", errors);
 
   return (
     <S.Container>
@@ -58,12 +56,12 @@ const Register = () => {
           <S.WelcomeText>Registrar conta!</S.WelcomeText>
           <S.FormContainer onSubmit={(e) => handleSubmit(e)}>
             <TextFormField
-                name="Nome"
-                placeholder="Maria Antonieta"
-                type="text"
-                ref={inputRefName}
-                required={true}
-                minLength={4}
+              name="Nome"
+              placeholder="Maria Antonieta"
+              type="text"
+              ref={inputRefName}
+              required={true}
+              minLength={4}
             />
             <TextFormField
               name="Email"
@@ -74,12 +72,12 @@ const Register = () => {
               required={true}
             />
             <TextFormField
-                name="Telefone"
-                placeholder="84 9 8888-8888"
-                type="text"
-                ref={inputRefPhone}
-                required={true}
-                minLength={11}
+              name="Telefone"
+              placeholder="84 9 8888-8888"
+              type="text"
+              ref={inputRefPhone}
+              required={true}
+              minLength={11}
             />
             <TextFormField
               name="Senha"

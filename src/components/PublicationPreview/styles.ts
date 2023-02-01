@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 type PublicationImageProps = {
@@ -8,7 +9,7 @@ type PublicationTypeProps = {
   type: string;
 };
 
-export const PublicationImage = styled.div<PublicationImageProps>`
+export const PublicationImage = styled(Link) <PublicationImageProps>`
   cursor: pointer;
   position: relative;
   background-image: url(${(props) => props.imageUrl});
@@ -32,9 +33,9 @@ export const Container = styled.div<PublicationTypeProps>`
         box-sizing: content-box;
         box-shadow: 0 0 0 2px
           ${({ type, theme }) =>
-            type === "missing"
-              ? theme.colors["gray/500"]
-              : theme.colors["rose/600"]};
+    type === "missing"
+      ? theme.colors["gray/500"]
+      : theme.colors["rose/600"]};
         color: ${({ theme }) => theme.colors["gray/800"]};
         z-index: 10;
         width: 100%;
@@ -55,7 +56,7 @@ export const Tag = styled.div<PublicationTypeProps>`
   border-radius: 2rem;
   border: 2px solid
     ${({ type, theme }) =>
-      type === "missing" ? theme.colors["gray/500"] : theme.colors["rose/600"]};
+    type === "missing" ? theme.colors["gray/500"] : theme.colors["rose/600"]};
   color: ${({ theme }) => theme.colors["gray/800"]};
   font-size: 1.3rem;
   background-color: ${({ theme }) => theme.colors.white}; ;

@@ -20,17 +20,12 @@ const PublicationPreview = ({
   image_url,
   address,
   created_at,
-  setShowInfoPopById,
 }: PublicationPreviewProps) => {
   const createdDate = new Date(created_at).toLocaleDateString("pt-br");
   const formated_tag = tag === "missing" ? "perdido" : "adoção";
   return (
-    <S.Container
-      type={tag}
-      onMouseEnter={() => setShowInfoPopById(id)}
-      onMouseLeave={() => setShowInfoPopById(null)}
-    >
-      <S.PublicationImage imageUrl={image_url}>
+    <S.Container type={tag}>
+      <S.PublicationImage to={`/publication/${id}`} imageUrl={image_url}>
         <S.Tag type={tag}>{formated_tag}</S.Tag>
       </S.PublicationImage>
       <S.ContainerPublicationsDetails>

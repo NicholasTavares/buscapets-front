@@ -11,17 +11,18 @@ type TextFormFieldProps = {
   pattern?: string;
   patternMessage?: string;
   paste?: boolean;
+  showLabel?: boolean;
 };
 
 type Ref = HTMLInputElement;
 
 export const TextFormField = forwardRef<Ref, TextFormFieldProps>(
-  ({ name, type, placeholder, error, required, minLength, pattern, patternMessage, paste = true }, ref) => {
+  ({ name, type, placeholder, error, required, minLength, pattern, patternMessage, paste = true, showLabel = true }, ref) => {
     const [seePassword, setSeePassword] = useState(false);
     return (
       <S.Container>
         <S.FieldLabelContainer>
-          <S.Label htmlFor={name}>{name}</S.Label>
+          {showLabel && <S.Label htmlFor={name}>{name}</S.Label>}
           <S.FieldContainer>
             <S.Input
               ref={ref}

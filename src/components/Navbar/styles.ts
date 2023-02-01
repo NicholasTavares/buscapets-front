@@ -72,8 +72,9 @@ export const TextButton = styled.div`
   `}
 `;
 
-export const PublishButton = styled.div`
+export const PublishButton = styled(Link)`
   cursor: pointer;
+  text-decoration: none;
   display: flex;
   padding: 0.7rem 1.5rem;
   justify-content: center;

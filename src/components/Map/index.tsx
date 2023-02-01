@@ -5,11 +5,6 @@ import { Marker } from "../Marker";
 import { Loading } from "../Loading";
 import * as S from "./styles";
 
-type PublicationPictureProps = {
-  id: string;
-  publication_picture: string;
-};
-
 type PlaceProps = {
   id: string;
   title: string;

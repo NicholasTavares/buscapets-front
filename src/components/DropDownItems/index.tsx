@@ -8,17 +8,17 @@ export const DropDownItems = () => {
   const { state, setState } = useAuth();
   const logout = () => {
     localStorage.removeItem('jwt');
-    setState({ auth: false });
+    setState({ ...state, auth: false });
   };
   return (
     <S.Button>
       <List size={20} onClick={() => setOpen(!open)} />
       <S.Container open={open}>
         <S.ContainerOptions>
-          { state.auth ? 
+          {state.auth ?
             <S.Option onClick={() => logout()} to="/login">
               <SignIn size={18} weight="light" />
-                Sair
+              Sair
             </S.Option> :
             <S.Option to="/login">
               <SignIn size={18} weight="light" />

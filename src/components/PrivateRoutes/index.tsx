@@ -4,6 +4,6 @@ import { useAuth } from "../../hooks/useAuth";
 
 export const PrivateRoutes = () => {
   const { state } = useAuth();
-  return state.auth ? <Outlet/> : <Navigate to="/signin"/>;
+  return state.auth ? <Outlet/> : <Navigate to="/login"/>;
 };
 

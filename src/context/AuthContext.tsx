@@ -1,10 +1,10 @@
 import { createContext, ReactNode, useState } from "react";
 
-type AppContextState = { auth: string | false };
+type AppContextState = { auth: string | boolean, coordinates: { lat: number, lng: number }, address: any };
 
 const appCtxDefaultValue = {
-  state: { auth: localStorage.getItem("jwt") || false },
-  setState: (state: AppContextState) => {},
+  state: { auth: localStorage.getItem("jwt") || false, coordinates: { lat: 0, lng: 0 }, address: null },
+  setState: (state: AppContextState) => { },
 };
 
 type AuthProviderProps = {
