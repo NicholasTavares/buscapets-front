@@ -1,22 +1,22 @@
 import { FormEvent, createRef } from 'react';
 import { useParams } from 'react-router-dom';
-import { Navbar } from '../../components/Navbar'
-import { publicationGet } from '../../api/publicationAPI';
+import { Navbar } from '../../layout/Navbar'
+import { getPublication } from '../../api/services/publication';
 import { useMutation, useQuery } from 'react-query';
 import { Loading } from '../../components/Loading';
 import { Comment } from '../../components/Comment';
-import { TextFormField } from '../../components/TextFormField';
-import { commentPost } from '../../api/commentsAPI';
+import { TextFormField } from '../../components/Forms/TextFormField';
+import { createComment } from '../../api/services/comments';
 import { useAuth } from '../../hooks/useAuth';
 import * as S from './styles'
 
 const Publication = () => {
     const { state, setState } = useAuth();
     const { publication_id } = useParams();
-    const { data: publication, isFetching } = useQuery(["publication", publication_id], () => publicationGet(publication_id));
+    const { data: publication, isFetching } = useQuery(["publication", publication_id], () => getPublication(publication_id));
     const inputRefImage = createRef<HTMLInputElement>();
 
-    const { mutate } = useMutation(commentPost);
+    const { mutate } = useMutation(createComment);
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();

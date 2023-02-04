@@ -1,8 +1,8 @@
 import { createRef, FormEvent } from "react";
 import { useMutation } from "react-query";
 import { useNavigate } from "react-router-dom";
-import { signInPost } from "../../api/signInAPI";
-import { TextFormField } from "../../components/TextFormField";
+import { signIn } from "../../api/services/auth";
+import { TextFormField } from "../../components/Forms/TextFormField";
 import { useAuth } from "../../hooks/useAuth";
 import * as Assets from '../../assets/index'
 import * as S from "./styles";
@@ -12,7 +12,7 @@ const Login = () => {
   const navigate = useNavigate();
   const inputRefEmail = createRef<HTMLInputElement>();
   const inputRefPassword = createRef<HTMLInputElement>();
-  const { mutate, isLoading } = useMutation(signInPost, {
+  const { mutate, isLoading } = useMutation(signIn, {
     onSuccess: ({ token }) => {
       localStorage.setItem("jwt", token);
       setState({ ...state, auth: token });

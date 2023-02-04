@@ -1,8 +1,8 @@
 import { createRef, FormEvent, useState } from "react";
 import { useMutation } from "react-query";
 import { useNavigate } from "react-router-dom";
-import { RegisterUserPost } from "../../api/registerUserAPI";
-import { TextFormField } from "../../components/TextFormField";
+import { RegisterUser } from "../../api/services/user";
+import { TextFormField } from "../../components/Forms/TextFormField";
 import * as Assets from '../../assets/index'
 import * as S from "./styles";
 
@@ -14,7 +14,7 @@ const Register = () => {
   const inputRefPhone = createRef<HTMLInputElement>();
   const inputRefPassword = createRef<HTMLInputElement>();
   const inputRefPasswordConfirm = createRef<HTMLInputElement>();
-  const { mutate, isLoading } = useMutation(RegisterUserPost, {
+  const { mutate, isLoading } = useMutation(RegisterUser, {
     onSuccess: () => {
       navigate("/login");
     },

@@ -1,6 +1,6 @@
 import * as S from "./styles";
 import * as Assets from "../../assets/index";
-import { Navbar } from "../../components/Navbar";
+import { Navbar } from "../../layout/Navbar";
 
 const NotFound = () => {
   return (

@@ -1,13 +1,13 @@
 import { FormEvent, createRef, useState } from 'react';
 import { useAuth } from '../../hooks/useAuth';
-import { Navbar } from '../../components/Navbar';
+import { Navbar } from '../../layout/Navbar';
 import { useMutation } from 'react-query';
-import { publicationPost } from '../../api/publicationAPI';
+import { createPublication } from '../../api/services/publication';
 import { useNavigate } from 'react-router-dom';
-import { TextFormField } from '../../components/TextFormField';
-import { TextAreaFormField } from '../../components/TextAreaFormField';
-import { DateFormField } from '../../components/DateFormField';
-import { ImageFormField } from '../../components/ImageFormField';
+import { TextFormField } from '../../components/Forms/TextFormField';
+import { TextAreaFormField } from '../../components/Forms/TextAreaFormField';
+import { DateFormField } from '../../components/Forms/DateFormField';
+import { ImageFormField } from '../../components/Forms/ImageFormField';
 import MapAddress from '../../components/MapAddress';
 import * as S from './styles'
 
@@ -23,7 +23,7 @@ const Publish = () => {
     const [inputSex, setInputSex] = useState<'male' | 'female' | null>(null);
     const [inputType, setInputType] = useState<'adoption' | 'missing' | null>(null);
 
-    const { mutate, isLoading } = useMutation(publicationPost, {
+    const { mutate, isLoading } = useMutation(createPublication, {
         onSuccess: () => {
             navigate("/");
         },

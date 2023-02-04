@@ -1,8 +1,8 @@
 import { useLocation } from 'react-router-dom';
-import { DropDownItems } from "../DropDownItems";
+import { DropDownItems } from "../../components/DropDownItems";
 import { useAuth } from "../../hooks/useAuth";
-import * as S from "./styles";
 import * as Assets from "../../assets/index";
+import * as S from "./styles";
 
 export const Navbar = () => {
   const { state, setState } = useAuth();
@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   const logout = () => {
     localStorage.removeItem('jwt');
-    setState({ auth: false });
+    setState({ ...state, auth: false });
   };
   return (
     <S.Container>
@@ -29,7 +29,7 @@ export const Navbar = () => {
         <S.TextButton>Minhas publicações</S.TextButton>
         {location.pathname !== '/publish' && <S.PublishButton to="/publish">+ Publicar</S.PublishButton>}
         {state.auth ? <S.LogOutButton onClick={() => logout()} to="/login">Sair</S.LogOutButton> : <S.SignInButton to="/login">Entrar</S.SignInButton>}
-        
+
       </S.ContainerButtons>
     </S.Container>
   );

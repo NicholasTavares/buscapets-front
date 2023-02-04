@@ -1,20 +1,22 @@
-import { Faders, MagnifyingGlass } from "phosphor-react";
-import { Navbar } from "../../components/Navbar";
-import { Footer } from "../../components/Footer";
-import PublicationPreview from "../../components/PublicationPreview";
-import * as S from "./styles";
-import Places from "../../components/Map";
 import { useState } from "react";
+import { Faders, MagnifyingGlass } from "phosphor-react";
+import { Navbar } from "../../layout/Navbar";
+import { Footer } from "../../layout/Footer";
 import { usePublications } from "../../hooks/usePublications";
+import PublicationPreview from "../../components/PublicationPreview";
+import Places from "../../components/Map";
+import * as S from "./styles";
 
 const Home = () => {
   const [showInfoPopById, setShowInfoPopById] = useState<string | null>(null); //TODO: colocar isso globalmente
-  const { publications, isFetching } = usePublications();
+  let { publications, isFetching } = usePublications();
+
   return (
     <S.Container>
       <Navbar />
       <S.ContainerContent>
         <S.ContainerPublications>
+
           <S.ContainerFilterPublications>
             <S.ContainerFilterPublicationInput>
               <S.FilterPublicationInput placeholder="Procure uma publicação..." />
@@ -54,9 +56,10 @@ const Home = () => {
               ))}
             </S.PublicationsGrid>
           </S.ContainerPublicationsContent>
+
         </S.ContainerPublications>
 
-        {(!isFetching && publications?.length) && <Places places={publications} />}
+        <Places places={publications} />
 
       </S.ContainerContent>
       <Footer />

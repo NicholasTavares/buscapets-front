@@ -1,13 +1,12 @@
 import * as S from "./styles";
 import logo from "../../assets/buscapets-logo-footer.svg";
 
-
 export const Footer = () => {
   const date = new Date();
   return (
     <S.mainContainer>
       <S.logoLink to="/">
-        <S.logo alt="Logo do Buscapets" src={logo}/>
+        <S.logo alt="Logo do Buscapets" src={logo} />
       </S.logoLink>
       <S.linksContainer>
         <S.homeLink to="/">Página inicial</S.homeLink>

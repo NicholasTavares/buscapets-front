@@ -22,7 +22,7 @@ type PlaceProps = {
 };
 
 type PlacesProps = {
-  places: PlaceProps[];
+  places: PlaceProps[] | undefined;
 };
 
 type LibrariesGoogleMapsProps = (
