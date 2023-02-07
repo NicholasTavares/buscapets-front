@@ -1,12 +1,13 @@
-version: '3.3'
+version: '3.5'
 
 services:
-  dev:
-    build:
-      context: ./
-      dockerfile: Dockerfile
+  frontend:
+    build: .
+    restart: always
+    container_name: buscapets-frontend
     volumes:
-      - ./:/app
+      - ./src:/usr/buscapets/src
+      - ./.env:/usr/buscapets/.env
     ports:
       - '5173:5173'
     command: sh -c 'yarn dev'
