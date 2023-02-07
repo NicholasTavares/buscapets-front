@@ -3,3 +3,5 @@ WORKDIR /usr/buscapets
 
 ADD . .
 RUN yarn && yarn cache clean
+
+EXPOSE 5173
