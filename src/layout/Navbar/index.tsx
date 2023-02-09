@@ -32,6 +32,7 @@ export const Navbar = () => {
 
       </S.ContainerButtons>
     </S.Container>
+    
 
   );
 };
