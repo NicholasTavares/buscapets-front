@@ -5,6 +5,7 @@
     "title": "Gatinho perdido no IFRN",
     "description": "Meu gatinho se perdeu perto do IFRN Central, em frente ao Midway. Estava lenvando-o para se vacinar e um cachorro o assustou.",
     "pet_name": "Toby",
+    "address": "Av Salgado Filho",
     "type": "missing",
     "sex": "male",
     "last_location": {
@@ -35,6 +36,7 @@
     "title": "Labrador preto perdido perto do IFRN",
     "description": "Estava com meu cachorro passeando e ele viu um gato. Não consegui segurar, a coleira quebrou e ele saiu correndo. Não o encontrei mais. Ele tem uma coleira azul, seu nome é Paulo Oliveira",
     "pet_name": "Paulo Oliveira",
+    "address": "Av Salgado Filho",
     "type": "adoption",
     "sex": "male",
     "last_location": {
@@ -65,6 +67,7 @@
     "title": "Pinguim caiu do transporte para o Aquário Natal",
     "description": "Pinguim estava em transporte para um novo zoológico quando de alguma forma conseguiu escapar do caminhão refrigerado. O nome dele é Kowalski e é preto e branco.",
     "pet_name": "Kowalski",
+    "address": "Av Salgado Filho",
     "type": "missing",
     "sex": "male",
     "last_location": {

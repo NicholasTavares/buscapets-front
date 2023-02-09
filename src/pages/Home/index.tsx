@@ -5,6 +5,7 @@ import { Footer } from "../../layout/Footer";
 import { usePublications } from "../../hooks/usePublications";
 import PublicationPreview from "../../components/PublicationPreview";
 import Places from "../../components/Map";
+import data from './test.json'
 import * as S from "./styles";
 
 const Home = () => {
@@ -39,7 +40,7 @@ const Home = () => {
             </S.ContainerPublicationQtdResult>
 
             <S.PublicationsGrid>
-              {(!isFetching && publications?.length) && publications.map((publication) => (
+              {data.map((publication) => (
                 <PublicationPreview
                   key={publication.id}
                   id={publication.id}
