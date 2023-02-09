@@ -12,6 +12,7 @@ const Home = () => {
   const [showInfoPopById, setShowInfoPopById] = useState<string | null>(null); //TODO: colocar isso globalmente
   let { publications, isFetching } = usePublications();
 
+
   return (
     <S.Container>
       <Navbar />
